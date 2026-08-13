@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#0f0f23">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>ThumbZone</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Área de conteúdo scrollable -->
+  <main id="app">
+    <header class="top-bar">
+      <h1>📱 ThumbZone</h1>
+      <span class="badge">PWA</span>
+    </header>
+
+    <section id="feed" class="view active">
+      <div class="stories">
+        <div class="story add"><span>+</span><small>Seu</small></div>
+        <div class="story"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ana" alt=""><small>Ana</small></div>
+        <div class="story"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Bruno" alt=""><small>Bruno</small></div>
+        <div class="story"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Carol" alt=""><small>Carol</small></div>
+        <div class="story"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Diego" alt=""><small>Diego</small></div>
+        <div class="story"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Elisa" alt=""><small>Elisa</small></div>
+      </div>
+
+      <div class="posts">
+        <article class="post">
+          <div class="post-header">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ana" class="avatar" alt="">
+            <div class="post-meta">
+              <strong>Ana Silva</strong>
+              <span>2h atrás · São Paulo</span>
+            </div>
+            <button class="btn-more">⋯</button>
+          </div>
+          <div class="post-content">
+            <p>Explorando a cidade hoje! 🌆 A arquitetura de São Paulo é incrível. #urbano #fotografia</p>
+            <div class="post-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+          </div>
+          <div class="post-actions">
+            <button>❤️ 128</button>
+            <button>💬 24</button>
+            <button>🔄 8</button>
+          </div>
+        </article>
+
+        <article class="post">
+          <div class="post-header">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Bruno" class="avatar" alt="">
+            <div class="post-meta">
+              <strong>Bruno Costa</strong>
+              <span>4h atrás · Rio de Janeiro</span>
+            </div>
+            <button class="btn-more">⋯</button>
+          </div>
+          <div class="post-content">
+            <p>Novo projeto no ar! 🚀 Desenvolvendo um app com foco total na experiência mobile. A zona do polegar é crucial!</p>
+            <div class="post-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+          </div>
+          <div class="post-actions">
+            <button>❤️ 256</button>
+            <button>💬 42</button>
+            <button>🔄 15</button>
+          </div>
+        </article>
+
+        <article class="post">
+          <div class="post-header">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Carol" class="avatar" alt="">
+            <div class="post-meta">
+              <strong>Carol Mendes</strong>
+              <span>6h atrás · Belo Horizonte</span>
+            </div>
+            <button class="btn-more">⋯</button>
+          </div>
+          <div class="post-content">
+            <p>Café da manhã perfeito ☕🥐</p>
+            <div class="post-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+          </div>
+          <div class="post-actions">
+            <button>❤️ 89</button>
+            <button>💬 12</button>
+            <button>🔄 3</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="search" class="view">
+      <div class="search-box">
+        <input type="text" placeholder="Buscar pessoas, posts, tags...">
+      </div>
+      <div class="trending">
+        <h3>🔥 Em Alta</h3>
+        <div class="tag-list">
+          <span class="tag">#thumbzone</span>
+          <span class="tag">#pwa</span>
+          <span class="tag">#mobilefirst</span>
+          <span class="tag">#uxdesign</span>
+          <span class="tag">#javascript</span>
+          <span class="tag">#vercel</span>
+        </div>
+      </div>
+      <div class="users-grid">
+        <div class="user-card">
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ana" alt="">
+          <strong>Ana Silva</strong>
+          <button class="btn-follow">Seguir</button>
+        </div>
+        <div class="user-card">
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Bruno" alt="">
+          <strong>Bruno Costa</strong>
+          <button class="btn-follow">Seguir</button>
+        </div>
+        <div class="user-card">
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Carol" alt="">
+          <strong>Carol Mendes</strong>
+          <button class="btn-follow">Seguir</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="add" class="view">
+      <div class="create-post">
+        <div class="create-header">
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=You" class="avatar" alt="">
+          <span>O que está acontecendo?</span>
+        </div>
+        <textarea placeholder="Compartilhe seus pensamentos..."></textarea>
+        <div class="create-tools">
+          <button>📷 Foto</button>
+          <button>📍 Local</button>
+          <button>😊 Emoji</button>
+          <button>🏷️ Tag</button>
+        </div>
+        <button class="btn-publish">Publicar</button>
+      </div>
+    </section>
+
+    <section id="notifications" class="view">
+      <h2>Notificações</h2>
+      <div class="notif-list">
+        <div class="notif-item unread">
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ana" alt="">
+          <div class="notif-text">
+            <strong>Ana Silva</strong> curtiu sua postagem
+            <span>2 min atrás</span>
+          </div>
+        </div>
+        <div class="notif-item unread">
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Bruno" alt="">
+          <div class="notif-text">
+            <strong>Bruno Costa</strong> começou a seguir você
+            <span>15 min atrás</span>
+          </div>
+        </div>
+        <div class="notif-item">
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Carol" alt="">
+          <div class="notif-text">
+            <strong>Carol Mendes</strong> comentou: "Incrível! 🔥"
+            <span>1h atrás</span>
+          </div>
+        </div>
+        <div class="notif-item">
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Diego" alt="">
+          <div class="notif-text">
+            <strong>Diego Lima</strong> compartilhou sua postagem
+            <span>3h atrás</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="profile" class="view">
+      <div class="profile-header">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=You" class="profile-avatar" alt="">
+        <h2>Você</h2>
+        <p>@seuusuario</p>
+        <div class="profile-stats">
+          <div><strong>42</strong><span>Posts</span></div>
+          <div><strong>1.2k</strong><span>Seguidores</span></div>
+          <div><strong>380</strong><span>Seguindo</span></div>
+        </div>
+      </div>
+      <div class="profile-menu">
+        <button>✏️ Editar Perfil</button>
+        <button>🔖 Salvos</button>
+        <button>⚙️ Configurações</button>
+        <button>❓ Ajuda</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ZONA DO POLEGAR: Navegação inferior -->
+  <nav class="bottom-nav" id="bottomNav">
+    <button class="nav-item active" data-view="feed">
+      <span class="nav-icon">🏠</span>
+      <span class="nav-label">Início</span>
+    </button>
+    <button class="nav-item" data-view="search">
+      <span class="nav-icon">🔍</span>
+      <span class="nav-label">Buscar</span>
+    </button>
+    <div class="nav-spacer"></div>
+    <button class="nav-item" data-view="notifications">
+      <span class="nav-icon">🔔</span>
+      <span class="nav-label">Alertas</span>
+      <span class="nav-badge">2</span>
+    </button>
+    <button class="nav-item" data-view="profile">
+      <span class="nav-icon">👤</span>
+      <span class="nav-label">Perfil</span>
+    </button>
+  </nav>
+
+  <!-- FAB (Floating Action Button) na zona do polegar -->
+  <button class="fab" id="fabBtn" aria-label="Nova postagem">
+    <span>+</span>
+  </button>
+
+  <!-- Instalação PWA -->
+  <div id="installBanner" class="install-banner" style="display:none;">
+    <span>📲 Instalar ThumbZone?</span>
+    <button id="installBtn">Instalar</button>
+    <button id="dismissInstall">✕</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
